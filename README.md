@@ -2,8 +2,7 @@
 
 Базовые настройки перед конфигурированием:
 
-configure terminal
-
-line console 0
-logging synchronous
-exec-timeout 0 0
+  <code>configure terminal</code>
+  <code>line console 0</code>  
+logging synchronous  
+exec-timeout 0 0  
