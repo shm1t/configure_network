@@ -52,3 +52,20 @@ ip sla schedule 1 life forever start-time now
 
 track 100 ip sla 1  
 delay down 15 up 10  
+exit
+
+ip sla 2
+icmp-echo 10.10.10.2 source-ip 200.200.200.2
+frequency 5
+exit
+
+ip sla schedule 2 life forever start-time now
+
+track 200 ip sla 2
+delay down 15 up 10
+exit
+
+
+
+
+
