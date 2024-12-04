@@ -41,3 +41,14 @@ interface gigabitEthernet 0/2
 ip nat inside  
 exit  
   
+Base IP SLA configuration  
+  
+ip sla 1  
+icmp-echo 50.50.50.2 source-ip 100.100.100.2  
+frequency 5  
+exit  
+  
+ip sla schedule 1 life forever start-time now  
+
+track 100 ip sla 1  
+delay down 15 up 10  
